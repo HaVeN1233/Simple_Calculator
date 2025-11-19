@@ -14,6 +14,7 @@ public class Simple_Calculator {
             if(op == '+' || op == '-' || op == '/' || op == '*'){
                 break;
             }
+            System.out.println("Invalid Operator!");
         }
 
         System.out.print("Enter second number: ");
