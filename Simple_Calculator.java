@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Simple_Calculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        double a = sc.nextDouble();
+
+        char op;
+        for(;;){
+            System.out.print("Enter operator (+ - * /): ");
+            op = sc.next().charAt(0);
+            if(op == '+' || op == '-' || op == '/' || op == '*'){
+                break;
+            }
+        }
+
+        System.out.print("Enter second number: ");
+        double b = sc.nextDouble();
+
+        double result;
+
+        switch (op) {
+            case '+': result = a + b; break;
+            case '-': result = a - b; break;
+            case '*': result = a * b; break;
+            case '/': result = a / b; break;
+            default:
+                System.out.println("Invalid operator!");
+                return;
+        }
+
+        System.out.println("Result: " + result);
+    }
+}
